@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+
+    <!-- Bootstrap  -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Linking  -->
+    <link rel="stylesheet" href="css/SignUp.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bellota:wght@700&family=Black+Ops+One&family=Michroma&family=Montserrat:wght@500;700&family=Orbitron:wght@700&family=Piedra&family=Poiret+One&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f6b;">
+            <a class="navbar-brand navTitle">Library App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <a class="navbar-nav nav-link mr-auto mt-2 mt-lg-0 navItem" href="#"></a>
+              <form class="form-inline my-2 my-lg-0">
+                <a class="nav-link my-2 my-sm-0 navItem" href="/welcome">Home</a>
+              </form>
+            </div>
+        </nav>
+    </div>
+    <!-- content -->
+    <div>
+        <div class="BlueBar">
+            <a class="text-decoration-none Head" href="#"><%=head%></a>
+        </div>
+        <div style="min-height: 150vh; background-color: lightslategray;">
+            <form class="signup-form-1" method="POST" action="/signup/add" onsubmit="return !!(validateEmail() & validatePhone() & validatePassword() & validateCheckPassword());">
+                <h1><%=head%></h1>
+                <input type="text" placeholder="Full Name" class="txtb" name="name" required="">
+                <input type="email" placeholder="Email Address" id="email" class="txtb" name="useremail" required="">
+                <p for="email-check" id="email-error"></p>
+                <input type="number" placeholder="Phone Number" id="phone-number" name="phonenumber" maxlength="10" class="txtb" required="">
+                <p for="phonenumber-check" id="phone-error"></p>
+                <input type="password" placeholder="Password" id="password" class="txtb" name="password" required="">
+                <p for="password-check" id="password-error"></p>
+                <p for="password-strenght" id="password-strength"></p>
+                <input type="password" placeholder="Confirm Password" id="confirm-password" class="txtb" required="">
+                <p for="confirmpassword-check" id="confirm-error"></p>
+                <input type="submit" value="Create Account" id="submit" class="signup-btn text-decoration-none">
+                <a class="text-decoration-none" href="/signin">Already Have One ?</a>
+            </form>
+        </div>
+    </div>
+    <!-- footer  -->
+    <div>
+        <footer class="mastfoot mt-auto">
+            <p style="text-align: center;">For educational Purposes @<a class="foot" href="https://github.com/Justinjdaniel/LibraryApp">Library App</a>, by <a class="foot" href="https://github.com/Justinjdaniel/">Justin J</a>. <br>All Rights Reserved© 2020</p>
+          </footer>
+    </div>
+
+    <script src="js/SignUp.js"></script>
+    </body>
+</html>

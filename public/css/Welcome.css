@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bellota:wght@700&family=Black+Ops+One&family=Michroma&family=Montserrat:wght@500;700&family=Orbitron:wght@700&family=Piedra&family=Poiret+One&family=Seaweed+Script&display=swap');
+
+/* -----------------------------------
+font-family: 'Audiowide', cursive;
+font-family: 'Bellota', cursive;
+font-family: 'Black Ops One', cursive;
+font-family: 'Michroma', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Piedra', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Seaweed Script', cursive;
+------------------------------------ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navTitle{
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer
+}
+.navItem{
+    padding: 15px;
+    font-family: 'Michroma', sans-serif;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.navItem:hover{
+    color: white;
+    transform: scale(1.3);
+
+}
+.BlueBar{
+    height: 175px;
+    background-color: #00004d;
+    display: flex;
+    justify-content: space-between;
+}
+.Head{
+    color: #fff;
+    font-size: 300%;
+    margin: 40px 45px;
+    font-family: 'Michroma', sans-serif;
+}
+.Head:hover{
+    color: white;
+}
+.GreyBox{
+    background-color: lightgrey;
+    height: 630px;
+    position: relative;
+}
+.StoryBox{
+    height: 550px;
+    margin: 30px 50px;
+    margin-top: -655px;
+    padding: 50px;
+    padding-top: 80px;
+    border-radius: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.Profile{
+    display: flex;
+}
+/* .ProPic{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+.ProPic:hover{
+    border-radius: 10px;
+} */
+.Pro-Info{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+h3{
+    position: absolute;
+    margin-top: -630px;
+    padding: 0 40%;
+    text-decoration: underline;
+    font-family: 'Piedra', cursive;
+    z-index: 10;
+}
+h4{
+    font-family: 'Poiret One', cursive;
+    font-weight: bolder;
+}
+h5{
+    font-family: 'Seaweed Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    padding: 0 37%;
+}
+.readNxt{
+    padding: 0 9%;
+    font-family: 'Montserrat', sans-serif;
+}
+#readNxt{
+    font-weight: bold;
+    font-size: 110%;
+}
+p:before{
+    content: 'Y';
+    margin: 10px 0;
+    margin-left: 50px;
+}
+#createAc{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.SocialTxt{
+    position: absolute;
+    margin-left: 50px;
+    bottom:50px;
+}
+.SocialBtn{
+    position: absolute;
+    margin-left: 50px;
+    bottom: 10px;
+}

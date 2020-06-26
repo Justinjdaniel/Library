@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <!-- Bootstrap  -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Linking  -->
+    <link rel="stylesheet" href="css/Welcome.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bellota:wght@700&family=Black+Ops+One&family=Michroma&family=Montserrat:wght@500;700&family=Orbitron:wght@700&family=Piedra&family=Poiret+One&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header  -->
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f6b;">
+          <a class="navbar-brand navTitle">Library App</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <a class="navbar-nav nav-link mr-auto mt-2 mt-lg-0 navItem" href="#"></a>
+            <form class="form-inline my-2 my-lg-0">
+              <a class="nav-link  navItem" href="/signin">Sign In</a>
+              <a class="nav-link my-2 my-sm-0 navItem" href="/signup">Sign Up</a>
+            </form>
+          </div>
+      </nav>
+    </div>
+    <!-- content  -->
+    <div>
+        <div class="BlueBar">
+            <a class="text-decoration-none Head" href="#"><%=head%></a>
+        </div>
+        <div>
+            <div class="GreyBox">
+                <h2 class="SocialTxt">Follow Us</h2>
+                <div class="btn-group SocialBtn" role="group" aria-label="">
+                    <button type="button" class="btn btn-primary">Twitter</button>
+                    <button type="button" class="btn btn-facebook" style="background-color: #3B5998; color: white;">Facebook</button>
+                    <button type="button" class="btn btn-danger">Google+</button>
+                  </div>
+            </div>
+            <!-- Story Box  -->
+            <h3>Famous Books Quotes</h3>
+            <div class="StoryBox shadow-sm">
+              <%for(i=0;i<welcome.length;i++){%>
+                <div class="Profile">
+                  <div class="Pro-Info">
+                    <h4><%=welcome[i].quote%></h4>
+                    <h5 class="d-inline GreyBg">- <%=welcome[i].author%></h5><br>
+                  </div>
+                </div>
+                <hr>
+                <%}%>
+                <div class="readNxt">
+                  <a id="readNxt"><%=readnxt[0].read1%></a>
+                  <p><%=readnxt[0].read2%> <a id="createAc" href="/signup"><%=readnxt[0].read3%></a>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <!-- Bootstrap  -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Linking  -->
+    <link rel="stylesheet" href="/css/Add.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bellota:wght@700&family=Black+Ops+One&family=Michroma&family=Montserrat:wght@500;700&family=Orbitron:wght@700&family=Piedra&family=Poiret+One&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header  -->
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f6b;">
+            <a class="navbar-brand navTitle">Library App</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <%for(i=0;i<5;i++){%>
+                  <li class="nav-item">
+                    <a class="nav-link navItem" href="/admin<%=nav[i].link%>"><%=nav[i].name%></a>
+                  </li>
+                <%}%>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <a class="nav-link my-2 my-sm-0 navItem" href="/welcome">Sign Out</a>
+              </form>
+            </div>
+        </nav>
+    </div>
+    <!-- content  -->
+    <div>
+        <div class="BlueBar">
+            <a class="text-decoration-none Head" href="#"><%=head%></a>
+        </div>
+        <div>
+          <!-- Story Box  -->
+          <div class="StoryBox shadow-sm">
+            <h1><%=add[0].head%></h1>
+            <div>
+              <form class="content" method="POST"  action="/admin/updateauthor/<%=id%>/up" enctype="multipart/form-data">
+                <div class="details">
+                      <label for="name"><%=add[0].author%></label><br>
+                      <input type="text" required name="author" placeholder="Author"><br>
+                      <label for="name"><%=add[0].born%></label><br>
+                      <input type="text" required name="born" placeholder="Born"><br>
+                      <label for="name"><%=add[0].bornplace%></label><br>
+                      <input type="text" required name="birthplace" placeholder="Birth Place"><br>
+                      <label for="name"><%=add[0].died%></label><br>
+                      <input type="text" required name="died" placeholder="Died"><br>
+                      <label for="name"><%=add[0].deathplace%></label><br>
+                      <input type="text" required name="deathplace" placeholder="Death Place"><br>
+                      <label for="name"><%=add[0].about%></label><br>
+                      <input type="text" required name="about" placeholder="About">
+                </div>
+                <div class="cover">
+                      <label for="cover"><%=add[0].img%></label>
+                      <input type="file" name="img" required accept="image/*"><br>
+                      <img src="" id="preview" alt="AuthorImage"><br>
+                      <button class="addbutton" type="submit">ADD</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="Social">
+                <h2 class="SocialTxt">Follow Us</h2>
+                <div class="btn-group SocialBtn" role="group" aria-label="">
+                    <button type="button" class="btn btn-primary">Twitter</button>
+                    <button type="button" class="btn btn-facebook" style="background-color: #3B5998; color: white;">Facebook</button>
+                    <button type="button" class="btn btn-danger">Google+</button>
+                </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>

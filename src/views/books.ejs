@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+
+    <!-- Bootstrap  -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Linking  -->
+    <link rel="stylesheet" href="/css/Library.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bellota:wght@700&family=Black+Ops+One&family=Michroma&family=Montserrat:wght@500;700&family=Orbitron:wght@700&family=Piedra&family=Poiret+One&family=Seaweed+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header  -->
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1f1f6b;">
+          <a class="navbar-brand navTitle">Library App</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <%n=navsize%>
+              <%for(i=0;i<n;i++){%>
+                <li class="nav-item">
+                  <a class="nav-link navItem" href="/<%=user%><%=nav[i].link%>"><%=nav[i].name%></a>
+                </li>
+              <%}%>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <a class="nav-link my-2 my-sm-0 navItem" href="/welcome">Sign Out</a>
+            </form>
+          </div>
+      </nav>
+    </div>
+    <!-- content  -->
+    <div>
+        <div class="BlueBar">
+            <a class="text-decoration-none Head" href="#"><%=head%></a>
+            <div class="SideBlueBar"></div>
+        </div>
+        <div>
+            <!-- Story Box  -->
+              <div class="StoryBox shadow-sm">
+                <%for(i=0;i<books.length;i++){%>
+                <div class="Profile">
+                  <img src="/images/<%=books[i].img%>" class="ProPic" alt="<%=books[i].img%>">
+                  <div class="Pro-Info">
+                    <h4><%=books[i].title%></h4>
+                    <h6 class="d-inline GreyBg"> <%=books[i].author%> </h6><br>
+                    <a class="monospace"><%=books[i].genre%> • <a href="/<%=user%>/books/<%=books[i]._id%>" class="text-muted monospace">Read More</a></a>
+                  </div>
+                  <div class="edit">
+                    <a class="Editbtn1 text-decoration-none" href="/admin/updatebook/<%=books[i]._id%>"><%=updel.up%></a>
+                    <a class="Editbtn2 text-decoration-none" href="/admin/deletebook/<%=books[i]._id%>"><%=updel.del%></a>
+                  </div>
+                </div>
+                <hr>
+                <%}%>
+                <button type="button" class="btn btn-primary more">More</button>
+              </div>
+              <div class="Social">
+                <h2 class="SocialTxt">Follow Us</h2>
+                <div class="btn-group SocialBtn" role="group" aria-label="">
+                    <button type="button" class="btn btn-primary">Twitter</button>
+                    <button type="button" class="btn btn-facebook" style="background-color: #3B5998; color: white;">Facebook</button>
+                    <button type="button" class="btn btn-danger">Google+</button>
+                  </div>
+              </div>
+        </div>
+    </div>
+
+</body>
+</html>
