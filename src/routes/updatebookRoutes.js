@@ -16,7 +16,7 @@ const upload = multer({storage: storage,});
 function router(nav){
     const add =[
         {
-            head:'Add a Book',
+            head:'Update a Book',
             title:'Book Title',
             author:'Author',
             genre:'Genre',

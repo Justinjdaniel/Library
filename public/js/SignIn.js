@@ -37,7 +37,7 @@ function validatePassword(){
         password.style.border ="2px solid red";
         passworderror.innerHTML = "Password is Wrong ☹";
         passworderror.style.color = "red";
-        alert("Hi there!☺: Use username: email-id & password: number,cap,small and symbols");
+        alert('Hi there!☺: Use username: email-id | Pwd: numb,cap,smlLtr & symbl | For admin Usr:\"admin@library.com\" | Pwd:\"Admin.12345\"');
         return false;
     }
 }
