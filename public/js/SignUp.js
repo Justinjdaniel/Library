@@ -41,6 +41,8 @@ function validatePhone(){
     if(phonenumber.test(number.value))
     {
         number.style.border = "2px solid green";
+        phoneerror.innerHTML ="Phone Number is Valid ☺";
+        phoneerror.style.color ="green";
         return true;
     }
     else
